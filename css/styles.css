@@ -1,0 +1,62 @@
+/*scss*/
+body {
+  font-size: 14px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 14px;
+  color: gray;
+}
+
+link {
+  text-decoration: none;
+}
+link:hover {
+  text-decoration: underline;
+}
+
+input,
+button {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.link {
+  padding-bottom: 10px;
+}
+
+input {
+  display: flex;
+  padding: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-page__inner {
+  padding: 20px 10px;
+}
+
+.login-page__form {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.login-item__submit {
+  display: flex;
+}
+
+.login-page__header,
+.login-page__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=styles.css.map */

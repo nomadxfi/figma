@@ -1,0 +1,58 @@
+/*scss*/
+$fs : 14px;
+$ff : 'Open Sans', Helvetica, Arial, sans-serif;
+@mixin bradius ($rad){
+    -webkit-border-radius: $rad;
+    border-radius: $rad;
+}
+
+body {
+    font-size: $fs;
+    font-family: $ff;
+}
+h2 {
+    font-size: $fs*2;
+
+}
+h3 {
+    font-size: $fs/1;
+    color: gray;
+}
+link {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+input,
+button {
+    @include bradius(10px);
+}
+.link {
+    padding-bottom: 10px;
+}
+input {
+    display: flex;
+    padding: 5px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.login-page__inner {
+    padding: 20px 10px;
+}
+.login-page__form {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.login-item__submit {
+    display: flex;
+    
+}
+.login-page__header,
+.login-page__footer {
+    
+    display: flex;
+    justify-content: space-between;
+}
