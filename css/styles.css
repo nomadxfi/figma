@@ -71,6 +71,13 @@ label {
   flex-shrink: 0;
 }
 
+.password-wrap,
+.email-wrap {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
 .login-page__bottom,
 .login-page__top,
 .login-content__authorization,
