@@ -36,6 +36,10 @@ button {
 label {
     padding-bottom: 10px;
 }
+.email-input,
+.password-input {
+    width: 315px;
+}
 input {
     margin-bottom: 20px;
     display: flex;
@@ -44,7 +48,7 @@ input {
 .login-page__inner {
     padding: 20px 10px;
 }
-.login-page__header {
+.login-page__top {
     align-items: center;
 }
 .login-logo {
@@ -56,17 +60,16 @@ input {
 }
 .login-item__submit {
     display: flex;
-    
 }
-.login-page__header,
-.login-page__footer,
+.login-page__bottom,
+.login-page__top,
 .login-content__authorization,
 .login-content__reminders {
     display: flex;
     justify-content: space-between;
 }
 .checkbox {
-    margin-right: 110px;
+    
 }
 button {
     width: 150px;

@@ -11,7 +11,7 @@
     <section class="login-page">
         <div class="login-page__inner">
 
-            <div class="login-page__header">
+            <div class="login-page__top">
                 <img class="login-image" src="images/Logo.svg" alt="logo">
                 <span class="login-logo">Photoma</span>
                 <a class="link" href="#">Home</a>
@@ -20,28 +20,34 @@
             <div class="login-page__form">
                 <h3>Start your personal photo experience</h3>
                 <h2>Login your account</h2>
-                    <div class="login-page__login-content">
-                        <form action="/">
-                            <label for="email-input">E-mail</label>
-                            <input id="email-input" type="email">
+                    <form class="login-page__login-content"action="/">
+                        <label for="email-input">E-mail</label>
+                            <div class="input-wrap">
+                                <input class="email-input" id="email-input" type="email">
+                            </div>
+                            
 
-                            <label for="password-input">Password</label>
-                            <input id="password-input" type="password">
-                            
-                            <div class="login-content__authorization">
-                                <button class="register" type="submit">Register</button>
-                                <button class="login" type="submit">Login</button>
+                        <label for="password-input">Password</label>
+                            <div class="input-wrap">
+                                <input class="password-input" id="password-input" type="password">
                             </div>
                             
-                            <div class="login-content__reminders">
+                        <div class="login-content__authorization">
+                            <button class="register" type="submit">Register</button>
+                            <button class="login" type="submit">Login</button>
+                        </div>
+                            
+                        <div class="login-content__reminders">
+                            <div class="input-wrap">
                                 <input type="checkbox" name="remember"><span class="checkbox">Remember me</span>
-                                <a class="reminders-link" href="#" class="forgot-pass">Forgot password?</a>
                             </div>
-                    </div>
+                                
+                            <a class="reminders-link" href="#" class="forgot-pass">Forgot password?</a>
+                        </div>
                 </form>
             </div>
 
-            <div class="login-page__footer">
+            <div class="login-page__bottom">
                 <a class="link" href="#">Impress||Privacy</a>
                 <nav class="lang-switcher">
                     <span>de</span>
@@ -49,7 +55,6 @@
                 </nav>
             </div>
         </div>
-
     </section>
 </body>
 </html>
