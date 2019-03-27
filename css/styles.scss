@@ -1,4 +1,9 @@
 /*scss*/
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 $fs : 14px;
 $ff : 'Open Sans', Helvetica, Arial, sans-serif;
 @mixin bradius ($rad){
@@ -6,7 +11,11 @@ $ff : 'Open Sans', Helvetica, Arial, sans-serif;
     border-radius: $rad;
 }
 
+html {
+    height: 100%;
+}
 body {
+    height: 100vh;
     font-size: $fs;
     font-family: $ff;
 }
@@ -18,13 +27,13 @@ h3 {
     font-size: $fs/1;
     color: gray;
 }
-.link {
-    text-decoration: none;
-    color: #6B6C6F;
+//.link {
+   // text-decoration: none;
+   // color: #6B6C6F;
     //&:hover {
     //    text-decoration: underline;
     //}
-}
+//}
 form {
     display: flex;
     flex-direction: column;
@@ -38,13 +47,18 @@ label {
 }
 .email-input,
 .password-input {
-    width: 315px;
-}
-input {
     margin-bottom: 20px;
     display: flex;
     padding: 10px;
 }
+.checkbox-input {
+    display: flex;
+    padding: 10px;
+}
+input {
+    
+}
+
 .login-page__inner {
     padding: 20px 10px;
 }
@@ -55,11 +69,14 @@ input {
     margin-right: 210px;
 }
 .login-page__form {
-    padding-top: 50%;
-    padding-bottom: 50%;
+    //padding-top: 50%;
+    //padding-bottom: 50%;
 }
 .login-item__submit {
     display: flex;
+}
+.login-page__bottom {
+    flex-shrink: 0;
 }
 .login-page__bottom,
 .login-page__top,
