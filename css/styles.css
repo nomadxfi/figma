@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 html {
@@ -52,6 +53,9 @@ label {
 }
 
 .login-page__inner {
+  height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
   padding: 20px 10px;
 }
 
@@ -75,7 +79,6 @@ label {
 .email-wrap {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
 }
 
 .login-page__bottom,
@@ -112,6 +115,36 @@ button {
 
 .lang-switcher span {
   text-transform: uppercase;
+}
+
+.login-page__top,
+.login-page__form,
+.login-page__bottom {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+body {
+  min-width: 320px;
+}
+
+.login-page__inner {
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .login-page__inner {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .login-page__inner {
+    width: 550px;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

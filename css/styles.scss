@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 $fs : 14px;
 $ff : 'Open Sans', Helvetica, Arial, sans-serif;
@@ -10,6 +11,8 @@ $ff : 'Open Sans', Helvetica, Arial, sans-serif;
     -webkit-border-radius: $rad;
     border-radius: $rad;
 }
+$tablet-width: 768px;
+$desktop-width: 1200px;
 
 html {
     height: 100%;
@@ -60,6 +63,9 @@ input {
 }
 
 .login-page__inner {
+    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
     padding: 20px 10px;
 }
 .login-page__top {
@@ -82,7 +88,6 @@ input {
 .email-wrap {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
 }
 .login-page__bottom,
 .login-page__top,
@@ -117,3 +122,39 @@ button {
 .lang-switcher span {
     text-transform: uppercase;
 }
+.login-page__top,
+.login-page__form,
+.login-page__bottom {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+//От 320px моб.версия
+body {
+    min-width: 320px; //лучше задать на body, чтобы не выпадали
+}
+.login-page__inner {
+    width: 320px; //либо auto, если макет резиновый
+    //padding: 0 20px; //не забываем про отступы от краёв
+    margin: 0 auto;
+}
+
+//От 768px планшетная версия
+@media (min-width: $tablet-width) {
+    .login-page__inner {
+        width: 500px; //либо auto, если макет резиновый
+        //padding: 0 64px; //не забываем про отступы от краёв
+        margin: 0 auto;
+    }
+}
+
+// От 1200 десктопная версия
+@media (min-width: $desktop-width) {
+    .login-page__inner {
+        width: 550px;//на десктопе контент обычно фиксированной ширины
+        //padding: 0 64px;//не забываем про отступы от краёв
+        margin: 0 auto;
+    }
+}
+//Ширина контейнера на вьюпорте в 1087px: 1087-128=959
+//Результат: бесшовный переход от планшета к десктопу
