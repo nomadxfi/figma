@@ -6,7 +6,7 @@
     list-style: none;
 }
 $fs : 14px;
-$ff : 'Open Sans', Helvetica, Arial, sans-serif;
+$ff : Helvetica, Arial, sans-serif;
 @mixin bradius ($rad){
     -webkit-border-radius: $rad;
     border-radius: $rad;
@@ -14,36 +14,51 @@ $ff : 'Open Sans', Helvetica, Arial, sans-serif;
 $tablet-width: 768px;
 $desktop-width: 1200px;
 
+@font-face {
+    font-weight: normal;
+    font-family: "BebasNeue";
+    font-style: normal;
+    src: url("../fonts/BebasNeue-Regular.woff2")format("woff2");
+}
+@font-face {
+    font-weight: bold;
+    font-family: "BebasNeue";
+    font-style: normal;
+    src: url("../fonts/BebasNeue-Bold.woff2")format("woff2");
+}
+
 html {
     height: 100%;
 }
 body {
-    height: 100vh;
+    height: 80vh;
     font-size: $fs;
-    font-family: $ff;
+    font-family: cursive;
+    padding: 30px 20px;
 }
 h2 {
     font-size: $fs*1.5;
+    padding-bottom: 15px;
 
 }
 h3 {
-    font-size: $fs/1;
+    font-size: $fs/1.5;
     color: gray;
+    text-transform: uppercase;
+    padding-bottom: 15px;
 }
-//.link {
-   // text-decoration: none;
-   // color: #6B6C6F;
-    //&:hover {
-    //    text-decoration: underline;
-    //}
-//}
-form {
+.link {
+   text-decoration: none;
+}
+.login-page__form {
     display: flex;
     flex-direction: column;
+    height: 80vh;
+    padding: 100px 30px 0 30px;
 }
 input,
 button {
-    @include bradius(15px);
+    @include bradius(20px);
 }
 label {
     padding-bottom: 10px;
@@ -53,33 +68,27 @@ label {
     margin-bottom: 20px;
     display: flex;
     padding: 10px;
+    border: 1px solid #DFE2E6;
 }
 .checkbox-input {
     display: flex;
     padding: 10px;
 }
-input {
-    
+.login-image {
+    vertical-align: middle;
 }
-
-.login-page__inner {
-    height: -webkit-fill-available;
-    display: flex;
-    flex-direction: column;
-    padding: 20px 10px;
-}
-.login-page__top {
-    align-items: center;
+.login-page__top,
+.login-page__bottom {
+    padding: 0 20px;
+    vertical-align: middle;
 }
 .login-logo {
     margin-right: 210px;
 }
-.login-page__form {
-    //padding-top: 50%;
-    //padding-bottom: 50%;
-}
-.login-item__submit {
+.login-item__submit,
+.checkbox {
     display: flex;
+    vertical-align: middle;
 }
 .login-page__bottom {
     flex-shrink: 0;
@@ -96,9 +105,6 @@ input {
     display: flex;
     justify-content: space-between;
 }
-.checkbox {
-    
-}
 button {
     width: 150px;
     height: 30px;
@@ -114,12 +120,13 @@ button {
     background: #29B1CC;
     color: #ffffff;
     font-weight: bold;
+    border: 1px solid #DFE2E6;
 }
 .reminders-link {
     color: #DFE2E6;
     text-decoration: none;
 }
-.lang-switcher span {
+.lang-switcher a {
     text-transform: uppercase;
 }
 .login-page__top,
@@ -128,6 +135,9 @@ button {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: auto;
+}
+.login-page__bottom {
+    height: 50px;
 }
 //От 320px моб.версия
 body {
@@ -142,7 +152,7 @@ body {
 //От 768px планшетная версия
 @media (min-width: $tablet-width) {
     .login-page__inner {
-        width: 500px; //либо auto, если макет резиновый
+        width: 450px; //либо auto, если макет резиновый
         //padding: 0 64px; //не забываем про отступы от краёв
         margin: 0 auto;
     }
