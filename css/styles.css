@@ -29,6 +29,22 @@ body {
   padding: 30px 20px;
 }
 
+.login-page__top a {
+  display: flex;
+  align-items: center;
+}
+
+header .logo-link {
+  color: #252529;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header .home-link {
+  color: #6B6C6F;
+  text-decoration: none;
+}
+
 h2 {
   font-size: 21px;
   padding-bottom: 15px;
@@ -43,6 +59,7 @@ h3 {
 
 .link {
   text-decoration: none;
+  color: #DFE2E6;
 }
 
 .login-page__form {
@@ -60,6 +77,7 @@ button {
 
 label {
   padding-bottom: 10px;
+  color: #6B6C6F;
 }
 
 .email-input,
@@ -68,6 +86,7 @@ label {
   display: flex;
   padding: 10px;
   border: 1px solid #DFE2E6;
+  color: #6B6C6F;
 }
 
 .checkbox-input {
@@ -92,7 +111,8 @@ label {
 .login-item__submit,
 .checkbox {
   display: flex;
-  vertical-align: middle;
+  align-items: center;
+  color: #6B6C6F;
 }
 
 .login-page__bottom {
@@ -138,6 +158,11 @@ button {
   text-decoration: none;
 }
 
+.logo-link,
+.checkbox {
+  margin-left: 5px;
+}
+
 .lang-switcher a {
   text-transform: uppercase;
 }
@@ -152,6 +177,10 @@ button {
 
 .login-page__bottom {
   height: 50px;
+}
+
+.login-page__bottom .link {
+  color: #6B6C6F;
 }
 
 body {

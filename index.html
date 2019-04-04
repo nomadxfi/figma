@@ -10,14 +10,14 @@
 </head>
 <body>
     <header class="login-page__top">
-        <span><img class="login-image" src="images/Logo.svg" alt="logo">Photoma</span>
-        <a class="link" href="#">Home</a>
+        <a class="logo-link" href="#"><img class="login-image" src="images/Logo.svg" alt="logo">Photoma</a>
+        <a class="home-link" href="#">Home</a>
     </header>
 
     <section class="login-page__form">
         <h3>Start your personal photo experience</h3>
         <h2>Login your account</h2>
-        <form class="login-page__login-content"action="/">
+        <form class="login-page__login-content" action="/">
             <div class="email-wrap">
                 <label for="email-input">E-Mail</label>
                     <input class="email-input" id="email-input" type="email">
@@ -34,8 +34,8 @@
             </div>
 
             <div class="login-content__reminders">
-                    <span class="checkbox"><input class="checkbox-input" type="checkbox" name="remember">Remember me</span>
-                    <a class="reminders-link" href="#" class="forgot-pass">Forgot password?</a>
+                    <span class="checkbox"><input type="checkbox" name="remember">Remember me</span>
+                    <a class="reminders-link" href="#">Forgot password?</a>
                 </div>
             </div>
         </form>
@@ -43,12 +43,14 @@
 
     <footer class="login-page__bottom">
         <div>
-            <a class="link" href="#">Impress&bull;</a>
+            <a class="link" href="#">Impress</a>
+            <span>&bull;</span>
             <a class="link" href="#">Privacy</a>
         </div>
         
             <nav class="lang-switcher">
-                <a class="link" href="#">de&bull;</a>
+                <a class="link" href="#">de</a>
+                <span>&bull;</span>
                 <a class="link" href="#">en</a>
             </nav>
     </footer>
