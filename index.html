@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/BebasNeue.css">
     <title>Login Page</title>
 </head>
-<body>
+<body class="login-page">
     <header class="login-page__top">
         <a class="logo-link" href="#"><img class="login-image" src="images/Logo.svg" alt="logo">Photoma</a>
         <a class="home-link" href="#">Home</a>
@@ -16,21 +16,21 @@
 
     <section class="login-page__form">
         <h3>Start your personal photo experience</h3>
-        <h2>Login your account</h2>
+        <h1 class="login-page__title">Login your account</h1>
         <form class="login-page__login-content" action="/">
-            <div class="email-wrap">
-                <label for="email-input">E-Mail</label>
-                    <input class="email-input" id="email-input" type="email">
+            <div class="c-input c-input--email">
+                <label class="c-input__label" for="email-input">E-Mail</label>
+                <input class="c-input__field" id="email-input" type="email">
             </div>
 
-            <div class="password-wrap">
-                <label for="password-input">Password</label>
-                <input class="password-input" id="password-input" type="password">
+            <div class="c-input c-input--password">
+                <label class="c-input__label" for="password-input">Password</label>
+                <input class="c-input__field" id="password-input" type="password">
             </div>
 
-            <div class="login-content__authorization">
-                <button class="register" type="submit">Register</button>
-                <button class="login" type="submit">Login</button>
+            <div class="login-page__actions">
+                <button class="button button--secondary" type="submit">Register</button>
+                <button class="button button--primary" type="submit">Login</button>
             </div>
 
             <div class="login-content__reminders">
