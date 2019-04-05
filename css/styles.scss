@@ -6,7 +6,7 @@
     list-style: none;
 }
 $fs : 14px;
-$ff : Helvetica, Arial, sans-serif;
+//$ff : Helvetica, Arial, sans-serif;
 @mixin bradius ($rad){
     -webkit-border-radius: $rad;
     border-radius: $rad;
@@ -31,10 +31,11 @@ html {
     height: 100%;
 }
 body {
-    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     font-size: $fs;
     font-family: cursive;
-    padding: 30px 20px;
 }
 .login-page__top a {
     display: flex;
@@ -67,7 +68,6 @@ h3 {
 .login-page__form {
     display: flex;
     flex-direction: column;
-    height: 80vh;
     padding: 100px 30px 0 30px;
 }
 input,
@@ -91,12 +91,15 @@ label {
     padding: 10px;
 }
 .login-image {
-    vertical-align: middle;
+    padding-right: 5px;
 }
 .login-page__top,
 .login-page__bottom {
-    padding: 0 20px;
-    vertical-align: middle;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    align-items: center;
 }
 .login-logo {
     margin-right: 210px;
@@ -107,8 +110,11 @@ label {
     align-items: center;
     color: #6B6C6F;
 }
+.login-page__top,
 .login-page__bottom {
+    flex-grow: 0;
     flex-shrink: 0;
+    flex-basis: auto;
 }
 .password-wrap,
 .email-wrap {
@@ -150,16 +156,18 @@ button {
 .lang-switcher a {
     text-transform: uppercase;
 }
-.login-page__top,
-.login-page__form,
-.login-page__bottom {
+
+.login-page__form {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: auto;
 }
+.login-content__remember {
+    display: flex;
+}
 .login-page__bottom {
     height: 50px;
-    
+
 }
 .login-page__bottom .link {
     color: #6B6C6F;
