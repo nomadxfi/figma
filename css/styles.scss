@@ -1,18 +1,7 @@
-/*scss*/
-*, *:before, *:after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-$fs : 14px;
-//$ff : Helvetica, Arial, sans-serif;
 @mixin bradius ($rad){
     -webkit-border-radius: $rad;
     border-radius: $rad;
 }
-$tablet-width: 768px;
-$desktop-width: 1200px;
 
 @font-face {
     font-weight: normal;
@@ -27,6 +16,23 @@ $desktop-width: 1200px;
     src: url("../fonts/BebasNeue-Bold.woff2")format("woff2");
 }
 
+
+$fs : 16px;
+$ff : Helvetica, Arial, sans-serif;
+
+$title-color: #252529;
+$main-text-color: #6B6C6F;
+
+$tablet-width: 768px;
+$desktop-width: 1200px;
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 html {
     height: 100%;
 }
@@ -35,64 +41,124 @@ body {
     flex-direction: column;
     height: 100vh;
     font-size: $fs;
-    font-family: cursive;
+    font-family: $ff;
 }
+
+h1 {
+    font-size: $fs*1.5;
+    color: $title-color;
+}
+h2 {
+    font-size: $fs*1.25;
+}
+h3 {
+    font-size: $fs*0.75;
+    font-weight: normal;
+    color: $main-text-color;
+    text-transform: uppercase;
+}
+
+input,
+button {
+    @include bradius(50px);
+}
+
+.button {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: none;
+    font-size: $fs*0.875;
+    font-weight: bold;
+
+    &--primary {
+        background: #29B1CC;
+        color: #ffffff;
+        box-shadow: 0px 10px 20px rgba(41, 177, 204, 0.3);
+    }
+
+    &--secondary {
+        border: 2px solid #29B1CC;
+        color: #29B1CC;
+        background: #ffffff;
+    }
+}
+
 .login-page__top a {
     display: flex;
     align-items: center;
 }
-header .logo-link {
-    color: #252529;
+
+.logo-link {
+    color: $title-color;
     text-decoration: none;
     font-weight: bold;
 }
+
 header .home-link {
-    color: #6B6C6F;
+    color: $main-text-color;
     text-decoration: none;
 }
-h2 {
-    font-size: $fs*1.5;
-    padding-bottom: 15px;
 
-}
-h3 {
-    font-size: $fs/1.5;
-    color: gray;
-    text-transform: uppercase;
-    padding-bottom: 15px;
-}
 .link {
    text-decoration: none;
    color: #DFE2E6;
 }
-.login-page__form {
+
+.login-page {
+    &__title {
+        margin-bottom: 24px;
+        margin-top: 32px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 416px;
+        margin: 0 auto;
+        padding: 100px 30px 0 30px;
+
+        @media (min-width: $tablet-width) {
+            max-width: 350px; //либо auto, если макет резиновый
+        }
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        margin: 32px -10px 24px;
+        & > .button {
+            margin: 0 10px;
+        }
+    }
+}
+
+.c-input {
     display: flex;
     flex-direction: column;
-    padding: 100px 30px 0 30px;
-}
-input,
-button {
-    @include bradius(20px);
-}
-label {
-    padding-bottom: 10px;
-    color: #6B6C6F;
-}
-.email-input,
-.password-input {
     margin-bottom: 20px;
-    display: flex;
-    padding: 10px;
-    border: 1px solid #DFE2E6;
-    color: #6B6C6F;
+    color: $main-text-color;
+
+    &__label {
+        margin-bottom: 12px;
+    }
+    &__field {
+        padding: 12px;
+        border: 1px solid #DFE2E6;
+    }
 }
+
+
 .checkbox-input {
     display: flex;
     padding: 10px;
 }
+
 .login-image {
     padding-right: 5px;
 }
+
 .login-page__top,
 .login-page__bottom {
     margin-left: 25px;
@@ -101,58 +167,49 @@ label {
     padding-bottom: 40px;
     align-items: center;
 }
+
 .login-logo {
     margin-right: 210px;
 }
+
 .login-item__submit,
 .checkbox {
     display: flex;
     align-items: center;
-    color: #6B6C6F;
+    color: $main-text-color;
 }
+
 .login-page__top,
 .login-page__bottom {
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: auto;
 }
+
 .password-wrap,
 .email-wrap {
     display: flex;
     flex-direction: column;
 }
+
 .login-page__bottom,
 .login-page__top,
-.login-content__authorization,
 .login-content__reminders {
     display: flex;
     justify-content: space-between;
 }
-button {
-    width: 150px;
-    height: 30px;
-    margin-bottom: 20px;
-}
-.register {
-    border: 2px solid #29B1CC;
-    color: #29B1CC;
-    background: #ffffff;
-    font-weight: bold;
-}
-.login {
-    background: #29B1CC;
-    color: #ffffff;
-    font-weight: bold;
-    border: 1px solid #DFE2E6;
-}
+
+
 .reminders-link {
     color: #DFE2E6;
     text-decoration: none;
 }
+
 .logo-link,
 .checkbox {
     margin-left: 5px;
 }
+
 .lang-switcher a {
     text-transform: uppercase;
 }
@@ -162,42 +219,16 @@ button {
     flex-shrink: 0;
     flex-basis: auto;
 }
+
 .login-content__remember {
     display: flex;
 }
+
 .login-page__bottom {
     height: 50px;
-
+    font-size: $fs*0.875;
 }
+
 .login-page__bottom .link {
-    color: #6B6C6F;
+    color: $main-text-color;
 }
-//От 320px моб.версия
-body {
-    min-width: 320px; //лучше задать на body, чтобы не выпадали
-}
-.login-page__inner {
-    width: 320px; //либо auto, если макет резиновый
-    //padding: 0 20px; //не забываем про отступы от краёв
-    margin: 0 auto;
-}
-
-//От 768px планшетная версия
-@media (min-width: $tablet-width) {
-    .login-page__inner {
-        width: 450px; //либо auto, если макет резиновый
-        //padding: 0 64px; //не забываем про отступы от краёв
-        margin: 0 auto;
-    }
-}
-
-// От 1200 десктопная версия
-@media (min-width: $desktop-width) {
-    .login-page__inner {
-        width: 550px;//на десктопе контент обычно фиксированной ширины
-        //padding: 0 64px;//не забываем про отступы от краёв
-        margin: 0 auto;
-    }
-}
-//Ширина контейнера на вьюпорте в 1087px: 1087-128=959
-//Результат: бесшовный переход от планшета к десктопу
