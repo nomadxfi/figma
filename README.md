@@ -1,3 +1,3 @@
 # Nomadxfi
-Логин-пйдж 
+Логин-пэйдж 
 [Ссылка на сайт](https://nomadxfi.github.io/login-page/)
